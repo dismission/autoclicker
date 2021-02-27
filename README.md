@@ -1,5 +1,5 @@
 # Clicker
-Hold down Key autoclicker that bypasses most mc servers (velt, faithfulmc, minemanclub, lunar)
+Hold down Key autoclicker.
 
 I'm stupid and dont know how to set up a hold left click hotkey, therefor create a macro on your left mouse button and set it to hold down F12, then you can hold down left click on mouse :)
 
