@@ -6,3 +6,7 @@ I'm stupid and dont know how to set up a hold left click hotkey, therefor create
 F12 - Start clicking
 P - Jitter (Fullscreen Only)
 PAGE_DOWN - Self Destruct
+
+$ pip install pynput
+
+dont know if you'll need anything else to install
