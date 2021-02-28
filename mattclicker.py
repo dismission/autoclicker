@@ -11,10 +11,10 @@ jitterkeycode = KeyCode(char='p')
 
 
 def clicker():
-    global niggerclicker
+    global mattclicker
     while 1:
         time.sleep(random.uniform(1, 1.6) * random.uniform(0.1, 0.001))
-        if niggerclicker:
+        if mattclicker:
             mouse.press(Button.left)
             mouse.release(Button.left)
 
@@ -53,7 +53,7 @@ jitter_thread = Jitter(delay)
 jitter_thread.start()
 
 def display_controls():
-    print("// Jewclicker")
+    print("// MattClicker")
     print("// - Settings:")
     print("// <!> Create a macro on mouse button one to prsss do F12 <!>")
     print("// - Click - F12")
@@ -65,7 +65,7 @@ def display_controls():
 
 
 
-niggerclicker = False
+mattclicker = False
 Listener = threading.Thread(target=clicker, daemon=True)
 Listener.start()
 jitter = -5
@@ -73,11 +73,11 @@ jitter = -5
 
 
 def on_press(key):
-    global niggerclicker
+    global mattclicker
     global jitter
     if key == keyboard.Key.f12:
-        niggerclicker = True
-    if key == jitterkeycode:
+        mattclicker = True
+    if key == mattclicker:
         if jitter == -5:
             jitter = 5
         else:
@@ -93,9 +93,9 @@ def on_press(key):
         jitter_thread.quit()
 
 def on_release(key):
-    global niggerclicker
+    global mattclicker
     if key == keyboard.Key.f12:
-        niggerclicker = False
+        mattclicker = False
     if key == keyboard.Key.f12:
         jitter_thread.stopjitter()
     if key == keyboard.Key.page_up:
