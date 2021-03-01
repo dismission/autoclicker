@@ -4,17 +4,24 @@ import threading
 import time
 import random
 from pynput.keyboard import KeyCode
+import shutil
+from os import system
+import subprocess
 
 mouse = Controller()
 delay = 0.05
 jitterkeycode = KeyCode(char='p')
 
 
+
+def mattclicker(cmd):
+    subprocess.call(cmd, shell=True)
+
 def clicker():
-    global mattclicker
+    global niggerclicker
     while 1:
         time.sleep(random.uniform(1, 1.6) * random.uniform(0.1, 0.001))
-        if mattclicker:
+        if niggerclicker:
             mouse.press(Button.left)
             mouse.release(Button.left)
 
@@ -53,19 +60,21 @@ jitter_thread = Jitter(delay)
 jitter_thread.start()
 
 def display_controls():
-    print("// MattClicker")
-    print("// - Settings:")
-    print("// <!> Create a macro on mouse button one to prsss do F12 <!>")
-    print("// - Click - F12")
-    print("// - Jitter - P")
-    print("// - Self Destruct - PAGE_UP")
-    print("// --------------------------------------------------")
+    width = shutil.get_terminal_size().columns
+    print("// Jewclicker".center(width))
+    print("// - Settings:".center(width))
+    print("// <!> Create a macro on mouse button one to prsss do F12 <!>".center(width))
+    print("// - Click - F12".center(width))
+    print("// - Jitter - P".center(width))
+    print("// - Self Destruct - PAGE_UP".center(width))
+    print("// --------------------------------------------------".center(width))
+    display_controls()
 
 
 
 
 
-mattclicker = False
+niggerclicker = False
 Listener = threading.Thread(target=clicker, daemon=True)
 Listener.start()
 jitter = -5
@@ -73,11 +82,11 @@ jitter = -5
 
 
 def on_press(key):
-    global mattclicker
+    global niggerclicker
     global jitter
     if key == keyboard.Key.f12:
-        mattclicker = True
-    if key == mattclicker:
+        niggerclicker = True
+    if key == jitterkeycode:
         if jitter == -5:
             jitter = 5
         else:
@@ -93,9 +102,9 @@ def on_press(key):
         jitter_thread.quit()
 
 def on_release(key):
-    global mattclicker
+    global niggerclicker
     if key == keyboard.Key.f12:
-        mattclicker = False
+        niggerclicker = False
     if key == keyboard.Key.f12:
         jitter_thread.stopjitter()
     if key == keyboard.Key.page_up:
@@ -103,7 +112,7 @@ def on_release(key):
 
 
 
-display_controls()
+
 
 with keyboard.Listener(
         on_press=on_press,
