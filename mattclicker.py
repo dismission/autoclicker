@@ -14,6 +14,8 @@ jitterkeycode = KeyCode(char='p')
 
 
 
+
+
 def mattclicker(cmd):
     subprocess.call(cmd, shell=True)
 
@@ -61,14 +63,14 @@ jitter_thread.start()
 
 def display_controls():
     width = shutil.get_terminal_size().columns
-    print("// Jewclicker".center(width))
-    print("// - Settings:".center(width))
-    print("// <!> Create a macro on mouse button one to prsss do F12 <!>".center(width))
-    print("// - Click - F12".center(width))
-    print("// - Jitter - P".center(width))
-    print("// - Self Destruct - PAGE_UP".center(width))
-    print("// --------------------------------------------------".center(width))
-    display_controls()
+    print("¯¯¯\_(ツ)_/¯¯¯".center(width))
+    print(" --------------------------------------------------".center(width))
+    print(" - Settings -".center(width))
+    print(" - Click - F12".center(width))
+    print(" - Jitter - P".center(width))
+    print(" - Self Destruct - PAGE_UP".center(width))
+    print(" --------------------------------------------------".center(width))
+    print(" <!> Create a macro on mouse button one to hold down F12 <!>".center(width))
 
 
 
@@ -111,7 +113,7 @@ def on_release(key):
         return False
 
 
-
+display_controls()
 
 
 with keyboard.Listener(
