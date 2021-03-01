@@ -20,10 +20,10 @@ def mattclicker(cmd):
     subprocess.call(cmd, shell=True)
 
 def clicker():
-    global niggerclicker
+    global mattclickerr
     while 1:
         time.sleep(random.uniform(1, 1.6) * random.uniform(0.1, 0.001))
-        if niggerclicker:
+        if mattclickerr:
             mouse.press(Button.left)
             mouse.release(Button.left)
 
@@ -73,10 +73,7 @@ def display_controls():
     print(" <!> Create a macro on mouse button one to hold down F12 <!>".center(width))
 
 
-
-
-
-niggerclicker = False
+mattclickerr = False
 Listener = threading.Thread(target=clicker, daemon=True)
 Listener.start()
 jitter = -5
@@ -84,10 +81,10 @@ jitter = -5
 
 
 def on_press(key):
-    global niggerclicker
+    global mattclickerr
     global jitter
     if key == keyboard.Key.f12:
-        niggerclicker = True
+        mattclickerr = True
     if key == jitterkeycode:
         if jitter == -5:
             jitter = 5
@@ -104,9 +101,9 @@ def on_press(key):
         jitter_thread.quit()
 
 def on_release(key):
-    global niggerclicker
+    global mattclickerr
     if key == keyboard.Key.f12:
-        niggerclicker = False
+        mattclickerr = False
     if key == keyboard.Key.f12:
         jitter_thread.stopjitter()
     if key == keyboard.Key.page_up:
