@@ -9,4 +9,6 @@ PAGE_DOWN - Self Destruct
 
 $ pip install pynput
 
-dont know if you'll need anything else to install
+---------------------------------------------------------------------
+Make sure you have the bat and the py in the same folder or directory
+---------------------------------------------------------------------
